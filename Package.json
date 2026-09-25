@@ -1,0 +1,13 @@
+{
+  "name": "agrisense-fullstack",
+  "version": "1.0.0",
+  "description": "Root configuration to run frontend and backend together",
+  "scripts": {
+    "backend": "npm start --prefix crop-health-backend",
+    "frontend": "npm run dev --prefix AgriSense_frontend_final",
+    "dev": "concurrently -n \"backend,frontend\" -c \"blue,green\" \"npm run backend\" \"npm run frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
